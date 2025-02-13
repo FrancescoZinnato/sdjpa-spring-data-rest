@@ -19,4 +19,9 @@ public interface BeerRepository extends JpaRepository<Beer, UUID> {
     Page<Beer> findAllByBeerNameAndBeerStyle(String beerName, BeerStyleEnum beerStyle, Pageable pageable);
 
     Beer findByUpc(String upc);
+
+    /*
+    utilizzando url/search/nomedelquerymethod?nomeparametro=valore possiamo effettuare ricerche questi metodi grazie a DataRest.
+    /api/v1/beer è l'endpoint di base del controller che offre operazioni di get/post/put/delete automaticamente grazie a DataRest.
+     */
 }
